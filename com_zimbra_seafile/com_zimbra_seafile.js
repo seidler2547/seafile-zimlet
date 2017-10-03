@@ -157,6 +157,7 @@ function(text, type, timeout) {
 }; 
 
 SeafileZimlet.prototype.addAuthToken = function(request) {
+    request.withCredentials = true;
     request.setRequestHeader("Authorization", "Token " + readCookie("seafile_token"));
 }
 
